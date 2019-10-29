@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow|Source+Code+Pro');
+
+body {
+  margin: 0;
+  padding: 0;
+  border: 0 none;
+  background: #FFFEF7;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  border: 0 none;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+a:link, a:visited {
+  color: #744720;
+}
+
+a:hover, a:active {
+  color: #c28d5f;
+}
+
+li.entry > a:link, li.entry > a:visited {
+  color: #222;
+}
+
+li.entry > a:hover, li.entry > a:active {
+  color: #777;
+}
+
+ul.nav {
+  color: #222;
+  font-size: 130%;
+  font-family: 'PT Sans Narrow';
+}
+
+li.entry {
+  margin: 0 0 0 20px;
+  display: inline;
+}
+
+.footer-msg {
+  color: #777;
+  font-size: 60%;
+  font-family: 'PT Sans Narrow';
+}
+
+.posts-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 100%;
+  font-family: 'PT Sans Narrow', 'Microsoft YaHei', 'Hiragino Sans GB';
+}
+
+.post-summary {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 7.5px 0;
+}
+
+.post-summary > .post-title {
+  max-width: 40vw;
+}
+
+.post-summary > .post-date {
+  color: #777;
+}
+
+.paginator {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  font-family: 'PT Sans Narrow';
+}
+
+a.extend, a.page-number, span.space, span.page-number {
+  margin: 0 3px;
+}
+
+span.current {
+  color: #777;
+}
+
+.category-name, .tag-name {
+  color: #777;
+  font-size: 110%;
+  font-family: 'PT Sans Narrow', 'Microsoft YaHei', 'Hiragino Sans GB';
+}
+
+.post, .page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: 'PT Sans Narrow', 'Microsoft YaHei', 'Hiragino Sans GB';
+}
+
+.post > .post-title, .page > .page-title {
+  font-size: 150%;
+}
+
+.post > .post-date {
+  color: #777;
+  font-size: 85%;
+  padding-top: 3px;
+}
+
+.post > .post-tags, .post > .post-categories {
+  padding-top: 3px;
+}
+
+li.post-tag-list-item:before, li.post-category-list-item:before {
+  height: 15px;
+  width: 15px;
+  margin-right: 2.5px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+li.post-tag-list-item:before {
+  content: url('/media/label.svg');
+}
+
+li.post-category-list-item:before {
+  content: url('/media/category.svg');
+}
+
+li.post-tag-list-item, li.post-category-list-item {
+  display: inline;
+  font-size: 85%;
+  margin: 0 10px 0 0;
+}
+
+.post-content {
+  max-width: 100%;
+}
+
+.post-content img {
+  width: 100%;
+}
+
+#img-title {
+  margin: 0;
+  padding: 2.5px 0 0 0;
+  color: #777;
+  font-size: 80%;
+  text-align: center;
+}
+
+code, pre {
+  font-family: "Monaco", "Bitstream Vera Sans Mono", "Lucida Console", "Terminal", "Source Code Pro";
+  color: #f8f8f2;
+  font-size: 0.8em;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+code {
+  padding: 2px;
+  border-radius: 4px;
+  background: #3a3c42;
+}
+
+ol {
+  padding: 0 0 0 30px;
+}
+
+ol > li {
+  list-style: inherit;
+  word-break: break-all;
+}
+
+#disqus_thread {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.post-content blockquote, .page-content blockquote {
+  margin: 10px 20px;
+}
+
+.post-content a, .page-content a {
+  word-break: break-all;
+}
+
+@media (max-width: 450px) {
+  header {
+    padding: 30px 7vw 10px 7vw;
+  }
+
+  object.logo {
+    width: 35px;
+    height: 35px;
+  }
+
+  footer {
+    padding: 15px 10vw;
+  }
+
+  .posts-list, .post, .page {
+    padding: 7.5px 12.5vw;
+  }
+
+  .paginator {
+    padding: 0 12.5vw;
+  }
+
+  .category-name, .tag-name {
+    padding: 0 12.5vw;
+  }
+}
+
+@media (min-width: 450px) {
+  header {
+    padding: 50px 17.5vw 20px 17.5vw;
+  }
+
+  object.logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  footer {
+    padding: 25px 17.5vw;
+  }
+
+  .posts-list, .post, .page {
+    padding: 7.5px 20vw;
+  }
+
+  .paginator {
+    padding: 0 20vw;
+  }
+
+  .category-name, .tag-name {
+    padding: 0 20vw;
+  }
+}
